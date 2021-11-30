@@ -1,0 +1,398 @@
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    html {
+        font-size: 56.5%;
+        /* 1rem = 10px */
+    }
+
+    /* .nav-content {
+        padding-left: 3.6rem;
+        padding-right: 9.6rem;
+        padding-top: 3.8rem;
+        padding-bottom: 3.8rem;
+    } */
+
+    .dashCard .card-body {
+        padding: 2.4rem 2.4rem;
+    }
+    .left-iconBox {
+        padding: 1.2rem;
+    }
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    #lgCloseNav {
+        display: none;
+    }
+    #smCloseNav {
+        display: block;
+    }
+    .nav-content {
+        padding: 24px 17px;
+    }
+    .nav-content .user-name {
+        display: none;
+    }
+    .hamburgerIcon {
+        height: 26px;
+        width: 26px;
+        margin-right: 16px;
+    }
+    .nav-content .logo {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .nav-settings>div:not(:last-child) {
+        margin-right: 20px;
+    }
+    .nav-content .notif-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+    .userImage img {
+        height: 36px;
+        width: 36px;
+    }
+
+    /* right side color palate */
+    .themePanel {
+        right: -35rem;
+        width: 34rem;
+        padding: 4rem 3rem;
+    }
+    .themePanel h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .theme-box h3 {
+        font-size: 20px;
+        line-height: 26px;
+        padding-top: 16px;
+    }
+
+    /* left side navbar */
+    .sidebar {
+        position: fixed;
+        top: 84px;
+        left: -92px;
+        height: calc(100vh - 84px);
+        padding: 16px 8px;
+        /* z-index: 1040; */
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar ul li button {
+        padding: 20px;
+    }
+    .sidebar ul li button svg {
+        height: 26px;
+        width: 26px;
+    }
+    .expansion-sidebar {
+        left: -26rem;
+        z-index: 2;
+    }
+    .expansion-sidebar.active {
+        left: 82px;
+    }
+    .expansion-sidebar li h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .smd-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--backgroundColor);
+        opacity: .7;
+        z-index: 1;
+        transition: 0.5s;
+        display: none;
+    }
+    .smd-overlay.active {
+        display: block;
+    }
+
+
+    /* main section */
+    .section-padding {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .main-section {
+        padding-left: 0;
+    }
+    .main-section.active {
+        padding-left: initial;
+    }
+    .dashboard-title {
+        padding: 4rem 17px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .dashboard-title img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .dashCard .card-body {
+        display: initial;
+        padding: 20px 24px;
+    }
+    .left-iconBox {
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 16px;
+        padding: 12px;
+    }
+    .left-iconBox svg {
+        width: 32px;
+        height: 32px;
+    }
+    .rightDesc h1 {
+        font-size: 28px;
+        line-height: 34px;
+        padding-bottom: 4px;
+    }
+    .rightDesc p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    /* pricing card */
+    .subscription-card.card {
+        flex-direction: row;
+        padding: 3.2rem 1.8rem 3.2rem;
+    }
+    .subscription-card .card-body {
+        flex: 0 0 80%;
+        max-width: 80%;
+        padding: 0;
+    }
+    .subscription-card .ligtGrayBtn {
+        margin-right: 0;
+        margin-bottom: 16px;
+        
+    }
+    .subscription-card .ligtGrayBtn , .subscription-card .actionBtn button {
+        padding: 7px;
+    }
+    .subscription-card .ligtGrayBtn svg, .subscription-card .actionBtn button svg {
+        width: 20px;
+        height: 20px;
+    }
+    .subscription-card .card-body h6 {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    .subscription-card .card-body h5 {
+        font-weight: bold;
+        color: var(--fontsActiveColor);
+    }
+    .subscription-card .card-body h2 {
+        font-size: 12px;
+        line-height: 15px;
+        color: var(--fontsInActiveColor);
+        margin: 6px 0 30px;
+    }
+    .subscription-card .card-body h5, .subscription-card .card-body h1 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .subscription-card .card-body h1>span {
+        font-weight: normal;
+    }
+    .subscription-card .card-footer {
+        padding: 0;
+    }
+
+
+
+    /* quotation section */
+    .quotTitle {
+        padding-top: 3.2rem;
+    }
+    .quotTitle h1, .summary-content h3 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .summary-card {
+        padding: 24px 16px;
+    }
+    .card-body {
+        padding: 0;
+        overflow: hidden;
+    }
+    .summary-card .card-body .row {
+        margin-top: -36px;
+    }
+    .summary-card .card-body .row > * {
+        margin-top: 36px;
+    }
+    .summary-content {
+        text-align: center;
+    }
+    .summary-content p {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 4px;
+    }
+
+    .dashTableTitle h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .dashTableTitle a {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .dashTableTitle a svg {
+        width: 12px;
+        height: 12px;
+    }
+    .dashboardTable th, .dashboardTable td {
+        min-width: 116px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    /* profile page */
+    .profile-header {
+        padding: 4rem 25px 4.1rem 25px;
+    }
+    .profName h1 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .profile-footer {
+        padding: 4.1rem 25px 4rem 25px;
+    }
+    .profile-footer h3, .profile-footer p {
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+
+    /* profile edit page */
+    .profileEdit-card {
+        padding         : 3.2rem 24px;
+    }
+    .submit-btn {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    /* all quotation page */
+    .all-quotation-page.section-padding {
+        padding: 0;
+    }
+    .all-quotation-page .row {
+        margin: 0;
+    }
+    .all-quotation-page .row > * {
+        padding: 0;
+    }
+    .all-quotation-page .summary-card {
+        border-radius: 0;
+    }
+    .dataTable {
+        padding-top: 0;
+    }
+    table.dataTable tbody td {
+        padding: 1.8rem .75rem;
+    }
+    .btn-outline {
+        padding: .8rem 1rem;
+    }
+    .dashboardTable.no-footer tr:last-child td {
+        padding-bottom: 3.6rem;
+    }
+    .dataTables_length {
+        margin-bottom: 24px;
+    }
+    .dataTables_wrapper .dataTables_info {
+        padding: 3rem 0;
+    }
+    .dataTables_filter label, .dataTables_length label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    .dataTables_filter input, .dataTables_length select {
+        margin: 0 !important;
+    }
+    .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 3rem;
+    }
+
+    /* add edit view modal */
+    .custom-modal .modal-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .custom-modal .modal-body {
+        padding: 30px 0;
+    }
+    .form-input label {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 12px;
+    }
+    .form-input input, .form-input select, .form-input textarea {
+        padding: 12px 24px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .form-check .form-check-label {
+        padding-bottom: 0;
+        margin-top: 3px;
+    }
+    .form-check {
+        padding-left: 2.5em;
+    }
+    .dropify-wrapper.touch-fallback .dropify-message {
+        padding: 20px 0;
+    }
+    
+    .view-modal h6 {
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 32px;
+    }
+    .view-modal h5 {
+        font-size: 16px;
+        line-height: 19px;
+        padding-top: 10px;
+    }
+
+    /* login, register, recover password 1,2  */
+    .form-padding {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    .form-header p {
+        font-size: 18px;
+        line-height: 26px;
+        padding-top: 2.4rem;
+    }
+}

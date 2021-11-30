@@ -1,0 +1,1646 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin            : 0;
+    padding           : 0;
+    outline           : none;
+    box-sizing        : border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+}
+
+html {
+    text-size-adjust        : 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust   : 100%;
+    scroll-behavior         : smooth;
+}
+
+body {
+    position   : relative;
+    overflow-x : hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin : 0;
+    padding: 0;
+}
+
+p {
+    margin : 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:focus-visible {
+    outline: none;
+}
+
+/* --input and button type focus & outline style-- */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+select:focus {
+    outline           : none;
+    box-shadow        : none;
+    -webkit-box-shadow: none;
+}
+
+.btn.focus,
+.btn:focus,
+button:focus,
+button:focus-visible {
+    outline   : 0;
+    box-shadow: none;
+}
+
+
+/* Custom CSS */
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+
+:root {
+    --backgroundColor   : #1A1A1A;
+    --componentBgColor  : #262626;
+    --fontsActiveColor  : #FFFFFF;
+    --fontsInActiveColor: #BDBDBD;
+    --iconActiveColor   : #F9BD35;
+    --inconInActiveColor: #828282;
+    --iconHoverColor    : #373737;
+    --successColor      : #6FCF97;
+    --infoColor         : #F2C94C;
+    --rejectColor       : #EB5757;
+}
+
+
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+
+.navbar-top {
+    background-color: var(--componentBgColor);
+    border-bottom   : 1px solid var(--iconHoverColor);
+}
+
+.nav-content {
+    padding: 2.4rem 3.6rem 2.4rem 3rem;
+}
+
+.nav-content .nav-btn {
+    background-color: transparent;
+    border          : none;
+}
+#smCloseNav {
+    display: none;
+}
+.nav-content .nav-btn:focus {
+    outline: none;
+    border : none;
+}
+
+.nav-content .notif-btn svg {
+    width : 2.8rem;
+    height: 2.8rem;
+}
+
+.hamburgerIcon {
+    height      : 3rem;
+    width       : 3rem;
+    margin-right: 2.7rem;
+}
+
+.hamburgerIcon path {
+    stroke: var(--fontsInActiveColor);
+}
+
+.nav-content .logo {
+    font-size     : 3rem;
+    letter-spacing: -0.02em;
+    font-weight   : 700;
+}
+
+.nav-content .logo span:first-child {
+    color: var(--iconActiveColor);
+}
+
+.nav-content .logo span:last-child {
+    color: var(--fontsActiveColor);
+}
+
+
+.notif-btn {
+    background-color: transparent;
+    border          : none;
+}
+
+.notificationIcon path {
+    stroke: var(--fontsInActiveColor);
+}
+
+
+.logoutBtn path {
+    fill: var(--fontsInActiveColor)
+}
+
+.nav-settings>div:not(:last-child) {
+    margin-right: 4rem;
+}
+
+.userImage {
+    margin-right: 1.2rem;
+}
+
+.userImage img {
+    height         : 4.2rem;
+    width          : 4.2rem;
+    border-radius  : 50%;
+    object-fit     : cover;
+    object-position: center center;
+}
+
+.user-name h1 {
+    font-weight   : 700;
+    font-size     : 1.8rem;
+    color         : var(--fontsActiveColor);
+    letter-spacing: -0.01em;
+}
+
+.user-name p {
+    font-weight: 400;
+    font-size  : 1.6rem;
+    color      : var(--fontsInActiveColor);
+}
+
+.sidebar {
+    position        : fixed;
+    top             : 9.2rem;
+    left            : 0;
+    bottom: 0;
+    background-color: var(--componentBgColor);
+    height          : calc(100vh - 9.2rem);
+    text-align      : center;
+    padding         : 3.6rem 1.2rem 1.2rem 1.2rem;
+    z-index         : 700;
+    overflow        : auto;
+    transition: all .5s;
+}
+
+.sidebar::-webkit-scrollbar {
+    width           : 0;
+    background-color: transparent;
+
+
+}
+
+/* hide scrollbar but allow scrolling */
+.sidebar {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar ul li button {
+    padding            : 2.7rem;
+    background-color   : transparent;
+    border             : none;
+    /* position        : relative; */
+}
+
+.sidebar ul li button:hover {
+    background-color: var(--iconHoverColor);
+    border-radius   : 8px;
+}
+
+.sidebar ul li button:hover svg path {
+    fill: var(--fontsActiveColor);
+}
+
+.sidebar ul li button svg {
+    height: 3.2rem;
+    width : 3.2rem;
+}
+
+.sideMenuIcon path {
+    fill: var(--inconInActiveColor);
+}
+
+.sideMenuIconActive path {
+    fill: var(--iconActiveColor);
+}
+
+.sideLi {
+    position: relative;
+}
+
+
+/* .sidebar ul li button:hover~.customTooltip {
+    display: inline-block;
+    width  : 18.2rem;
+} */
+
+
+
+/* .customTooltip {
+    color           : var(--fontsInActiveColor) !important;
+    background-color: var(--iconHoverColor);
+    font-size       : 1.5rem;
+    line-height     : 2.8rem;
+    font-weight     : 500;
+    padding         : .4rem 1.2rem;
+    position        : absolute;
+    top             : 2.7rem;
+    left            : 12.4rem;
+    display         : none;
+    z-index         : 12;
+} */
+
+.tooltip-inner {
+    color           : var(--fontsInActiveColor);
+    background-color: var(--iconHoverColor);
+    font-size       : 1.5rem;
+    line-height     : 2.8rem;
+    font-weight     : 500;
+    padding         : .4rem 1.2rem;
+}
+
+
+.tooltip-arrow {
+    display: none !important;
+}
+
+
+
+.expansion-sidebar {
+    position        : fixed;
+    top             : auto;
+    height          : 100vh;
+    width           : 23.6rem;
+    top             : 9.2rem;
+    left            : -20rem;
+    background-color: var(--componentBgColor);
+    border-left     : 1px solid var(--iconHoverColor);
+    text-align      : left;
+    padding         : 4.8rem 3.6rem 3.6rem 3.6rem !important;
+    overflow-y      : auto;
+    transition      : 0.5s;
+}
+
+
+
+.expansion-sidebar.active {
+    left: 11rem;
+}
+
+.expansion-sidebar::-webkit-scrollbar {
+    width           : 0;
+    background-color: transparent;
+}
+
+
+
+.expansion-sidebar li h3 {
+    font-size     : 2rem;
+    font-weight   : 700;
+    line-height   : 2.6rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    padding-bottom: 2.8rem;
+}
+
+
+.expansion-sidebar li a {
+    /* font-size    : 1.6rem; */
+    font-size    : 1.3rem;
+    font-weight  : 400;
+    line-height  : 2.6rem;
+    color        : var(--fontsInActiveColor);
+    display      : inline-block;
+    margin-bottom: 2rem;
+    transition   : 0.3s;
+}
+
+
+
+/* Theme Change Panel */
+.themePanel {
+    position        : fixed;
+    right           : -55rem;
+    top             : 0;
+    height          : 100vh;
+    width           : 55rem;
+    padding         : 4rem;
+    background-color: var(--componentBgColor);
+    color           : var(--fontsActiveColor);
+    z-index         : 2000;
+    overflow-y      : auto;
+    transition      : 0.5s;
+
+
+}
+
+.themePanel::-webkit-scrollbar {
+    width           : 0;
+    background-color: transparent;
+}
+
+.themePanel h1 {
+    font-size     : 3.6rem;
+    line-height   : 4.2rem;
+    font-weight   : 700;
+    letter-spacing: -0.02em;
+    padding-bottom: 3.5rem;
+}
+
+
+.overlay-close {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    height          : 100vh;
+    width           : 100%;
+    background-color: var(--backgroundColor);
+    opacity         : .7;
+    z-index         : 1990;
+    transition      : 0.5s;
+    display         : none;
+}
+
+.theme-box {
+
+    cursor: pointer;
+}
+
+.theme-box:not(:last-child) {
+    padding-bottom: 4rem;
+}
+
+
+.theme-box img {
+    width: 100%;
+}
+
+
+.theme-box h3 {
+    font-weight   : 500;
+    font-size     : 2.4rem;
+    line-height   : 2.9rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    padding-top   : 1.6rem;
+}
+
+.theme-box>div {
+    border-radius: 2rem;
+    overflow     : hidden;
+}
+
+.activeTheme {
+    border: .4rem solid var(--iconActiveColor);
+
+
+}
+
+.colorCombo div {
+    width : calc(100%/7);
+    height: 1.1rem;
+}
+
+.color1 div:first-child {
+    background-color: #1A1A1A;
+}
+
+.color1 div:nth-child(2) {
+    background-color: #373737;
+}
+
+.color1 div:nth-child(3) {
+    background-color: #828282;
+}
+
+.color1 div:nth-child(4) {
+    background-color: #BDBDBD;
+}
+
+.color1 div:nth-child(5) {
+    background-color: #FFFFFF;
+}
+
+.color1 div:nth-child(6) {
+    background-color: #F9BD35;
+}
+
+.color1 div:last-child {
+    background-color: #262626;
+}
+
+
+
+.color2 div:first-child {
+    background-color: #16182C;
+}
+
+.color2 div:nth-child(2) {
+    background-color: #383968;
+}
+
+.color2 div:nth-child(3) {
+    background-color: #74759F;
+}
+
+.color2 div:nth-child(4) {
+    background-color: #AEAED6;
+}
+
+.color2 div:nth-child(5) {
+    background-color: #FFFFFF;
+}
+
+.color2 div:nth-child(6) {
+    background-color: #35EDF9;
+}
+
+.color2 div:last-child {
+    background-color: #1E2240;
+}
+
+
+
+
+/* Main Content CSS */
+.main-section {
+    padding-left: 11rem;
+    transition  : 0.5s;
+}
+
+.main-section.active {
+    padding-left: 35rem;
+}
+
+.dashboard-title {
+    font-weight    : bold;
+    font-size      : 3.6rem;
+    line-height    : 4.2rem;
+    letter-spacing : -0.02em;
+    color          : var(--fontsActiveColor);
+    padding-top    : 4.0rem;
+    padding-left   : 4rem;
+    padding-right  : 4rem;
+    /* padding-left: 10rem;
+    padding-right  : 10rem; */
+    padding-bottom : 4.0rem;
+}
+
+
+.section-padding {
+    padding-left    : 4rem;
+    padding-right   : 4rem;
+    /* padding-left : 10rem;
+    padding-right   : 10rem; */
+}
+
+
+.dashCard .card-body {
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+    padding        : 3.2rem 4rem;
+}
+
+.dashCard {
+    background-color: var(--componentBgColor);
+    border-radius   : 1.6rem;
+}
+
+.left-iconBox {
+    background-color: var(--backgroundColor);
+    border-radius   : .8rem;
+    text-align      : center;
+    padding         : 1.8rem;
+    margin-right    : 1.2rem;
+}
+
+.left-iconBox svg {
+    width : 4rem;
+    height: 4rem;
+}
+
+.left-iconBox svg path {
+    fill: var(--iconActiveColor);
+}
+
+.rightDesc {
+    margin-left: 1.2rem;
+}
+
+
+.rightDesc h1 {
+    color         : var(--fontsActiveColor);
+    font-weight   : bold;
+    font-size     : 3.8rem;
+    line-height   : 3.8rem;
+    letter-spacing: -0.04em;
+    padding-bottom: .4rem;
+}
+
+.rightDesc p {
+    font-weight: normal;
+    font-size  : 2rem;
+    line-height: 2.6rem;
+    color      : var(--fontsInActiveColor);
+}
+
+
+.quotTitle {
+    padding-top   : 6.2rem;
+    padding-bottom: 3.2rem;
+}
+
+.quotTitle h1 {
+    color         : var(--fontsActiveColor);
+    font-weight   : 700;
+    font-size     : 3.4rem;
+    letter-spacing: -0.02em;
+}
+
+.summary-card {
+    background-color: var(--componentBgColor);
+    border-radius   : 1.6rem;
+    padding         : 3.2rem 3.2rem;
+    height          : 100%;
+}
+
+.summary-content {
+    padding-bottom: 4.8rem;
+}
+
+.summary-content:last-child {
+    padding-bottom: 0;
+}
+
+.summary-content h3 {
+    font-weight   : bold;
+    font-size     : 3.8rem;
+    letter-spacing: -0.04em;
+    color         : var(--fontsActiveColor);
+}
+
+.summary-content p {
+    font-weight: 400;
+    font-size  : 2rem;
+    color      : var(--fontsInActiveColor);
+}
+
+.dashTableTitle {
+    padding-bottom: 4rem;
+}
+
+.dashTableTitle h3 {
+    font-weight: bold;
+    font-size  : 2.4rem;
+    color      : var(--fontsActiveColor);
+}
+
+.dashTableTitle a {
+    font-weight: bold;
+    font-size  : 1.6rem;
+    color      : var(--iconActiveColor);
+
+}
+
+.dashTableTitle a svg path {
+    fill: var(--iconActiveColor);
+}
+
+.dashboardTable {
+    width: 100%;
+}
+
+.dashboardTable tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--iconHoverColor);
+}
+
+.dashboardTable th {
+    font-weight   : bold;
+    font-size     : 1.6rem;
+    color         : var(--fontsActiveColor);
+    letter-spacing: -0.02em;
+    padding-bottom: 1.6rem;
+
+}
+
+
+.dashboardTable th:first-child,
+.dashboardTable td:first-child {
+    text-align: left;
+}
+
+.dashboardTable th:last-child,
+.dashboardTable td:last-child {
+    text-align: right !important;
+}
+
+.dashboardTable.no-footer th:last-child {
+    padding-right: 8.5rem;
+}
+
+/* @media (min-width: 1680px) {
+    
+} */
+
+.dashboardTable td {
+    font-weight   : normal;
+    font-size     : 1.6rem;
+    color         : var(--fontsInActiveColor);
+    letter-spacing: -0.02em;
+    padding-top   : 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+/* .dashboardTable td:first-child {
+    text-align: left;
+}
+
+.dashboardTable td:last-child {
+    text-align: right;
+} */
+
+
+.dashboardTable tr:last-child td {
+    padding-bottom: 0;
+}
+
+
+
+
+
+
+
+/* Login Page CSS */
+
+.form-padding {
+    padding-top       : 4.6rem;
+    padding-bottom    : 4.6rem;
+    /* height         : 100vh; */
+    display           : flex;
+    justify-content   : center;
+    align-items       : center;
+    min-height        : 450px;
+}
+
+
+
+.form-container {
+    max-width: 47.5rem;
+    width    : 100%;
+    margin   : auto;
+}
+
+
+.form-header h1 {
+    font-weight   : bold;
+    font-size     : 4.4rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    text-align    : center;
+}
+
+.form-header h1 span {
+    color: var(--iconActiveColor);
+}
+
+
+.form-header p {
+    font-weight   : bold;
+    font-size     : 2.4rem;
+    text-align    : center;
+    color         : var(--fontsActiveColor);
+    padding-top   : .5rem;
+    padding-bottom: 4.4rem;
+}
+
+.form-input {
+    padding-bottom: 3.2rem;
+    position      : relative;
+}
+
+.form-input label {
+    font-weight   : 600;
+    font-size     : 1.8rem;
+    color         : var(--fontsActiveColor);
+    padding-bottom: 1.2rem;
+}
+
+.form-input input,
+.form-input select,
+.form-input textarea {
+    padding         : 2rem 2.4rem;
+    background-color: transparent !important;
+
+    /* border       : ; */
+    color           : var(--fontsInActiveColor);
+    font-size       : 1.8rem;
+    font-weight     : normal;
+    border          : .2rem solid var(--iconHoverColor);
+    border-radius   : .8rem;
+}
+
+.form-input input:focus,
+.form-input select:focus,
+.form-input textarea:focus {
+    background-color: transparent;
+    border          : .2rem solid var(--iconHoverColor);
+    color           : var(--fontsInActiveColor);
+
+}
+
+.eye-btn {
+    position: absolute;
+    top     : 6.2rem;
+    right   : 1.7rem;
+    cursor  : pointer;
+}
+
+
+.eye-btn svg path {
+    fill: var(--inconInActiveColor);
+}
+
+
+.submit-btn {
+    width           : 100%;
+    font-weight     : bold;
+    font-size       : 1.8rem;
+    text-align      : center;
+    color           : var(--backgroundColor);
+    padding         : 2rem;
+    background-color: var(--iconActiveColor);
+    border-radius   : 1rem;
+    border          : .2rem solid var(--iconActiveColor);
+
+}
+
+/* .form-input .submit-btn {
+    width           : 100%;
+    font-weight     : bold;
+    font-size       : 1.8rem;
+    text-align      : center;
+    color           : var(--backgroundColor);
+    padding         : 2rem;
+    background-color: var(--iconActiveColor);
+    border-radius   : 1rem;
+    border          : .2rem solid var(--iconActiveColor);
+
+} */
+
+
+
+.forgotPass {
+    padding-top: 3.5rem;
+}
+
+.forgotPass a {
+    display    : block;
+    text-align : center;
+    color      : var(--fontsActiveColor);
+    font-size  : 1.8rem;
+    font-weight: 500;
+}
+
+
+.create-account p {
+    text-align : center;
+    font-weight: normal;
+    font-size  : 1.8rem;
+    color      : var(--fontsInActiveColor);
+}
+
+.create-account p a {
+    font-size  : 1.6rem;
+    font-weight: bold;
+    color      : var(--fontsActiveColor);
+}
+
+
+
+.form-input .cancel-btn {
+    width           : 100%;
+    font-weight     : bold;
+    font-size       : 1.8rem;
+    text-align      : center;
+    color           : var(--fontsActiveColor);
+    padding         : 2rem;
+    background-color: transparent;
+    border-radius   : 1rem;
+    border          : .2rem solid var(--fontsActiveColor);
+}
+
+.resendEmIconBox {
+    padding-top   : 5.2rem;
+    padding-bottom: 7.6rem;
+}
+
+.resendEmIconBox p {
+    font-weight: 500;
+    font-size  : 2rem;
+    text-align : center;
+    color      : var(--fontsActiveColor);
+}
+
+
+
+/* Profile CSS */
+.profile-card {
+    max-width          : 80.8rem;
+    width              : 100%;
+    background-color   : var(--componentBgColor);
+    border-radius      : 1.6rem;
+    /* box-shadow      : 10px 10px 50px #6829760d; */
+    padding            : 0;
+    
+}
+
+.profile-card .card-body {
+    padding: 0;
+}
+
+.profile-header {
+    padding      : 4rem 4rem 4.1rem 4rem;
+    border-bottom: .2rem solid var(--iconHoverColor);
+}
+
+.profile-img {
+    height       : 10.1rem;
+    width        : 10.1rem;
+    border-radius: 50%;
+    overflow-y   : hidden;
+}
+
+.profile-img img {
+    width          : 100%;
+    border-radius  : 50%;
+    object-fit     : cover;
+    object-position: center center;
+}
+
+.profName h1 {
+    font-size  : 2.4rem;
+    font-weight: bold;
+    color      : var(--fontsActiveColor);
+    margin-top : 2.2rem;
+}
+
+.profName p {
+    font-weight: normal;
+    font-size  : 1.8rem;
+    color      : var(--fontsInActiveColor);
+}
+
+
+.editProfleLink {
+    font-weight: bold;
+    font-size  : 1.6rem;
+    color      : var(--iconActiveColor);
+}
+
+.editProfleLink:hover {
+    text-decoration: none;
+    color          : var(--iconActiveColor);
+}
+
+.editProfleLink svg {
+    height: 2.2rem;
+    width : 2.2rem;
+
+}
+
+.editProfleLink svg path {
+    fill: var(--iconActiveColor);
+}
+
+
+.profile-footer {
+    padding: 4.1rem 4rem 4rem 4rem;
+}
+
+.profile-footer p {
+    font-weight: 500;
+    font-size  : 1.6rem;
+    color      : var(--fontsInActiveColor);
+    line-height: 2.8rem;
+}
+
+
+.profile-footer h3 {
+    font-weight: 500;
+    font-size  : 1.6rem;
+    color      : var(--fontsActiveColor);
+    line-height: 2.8rem;
+
+}
+
+
+/* Profile Edit */
+.profileEdit-card {
+    border-radius   : 1.6rem;
+    background-color: var(--componentBgColor);
+    padding         : 3.2rem 3.6rem;
+    max-width       : 59.5rem;
+}
+
+.profile-editImgBx {
+    height          : 15rem;
+    width           : 15rem;
+    padding         : 1.6rem;
+    overflow        : hidden;
+    border-radius   : 50%;
+    /* margin-bottom: 4.6rem; */
+    max-width       : 15rem;
+    margin          : 0 auto 3.2rem;
+}
+
+.profile-editImgBx img {
+    width          : 100%;
+    border-radius  : 50%;
+    object-fit     : cover;
+    object-position: center center;
+    border         : .2rem solid var(--iconActiveColor);
+}
+
+.profileEdit-card .file-upload-label {
+    width        : 3.2rem;
+    height       : 3.2rem;
+    line-height  : 3.2rem;
+    border-radius: 50%;
+    background   : var(--iconActiveColor);
+    text-align   : center;
+    cursor       : pointer;
+    position     : absolute;
+    top          : 70%;
+    left         : 60%;
+}
+
+.profileEdit-card input[type="file"] {
+    position  : absolute;
+    opacity   : 0;
+    visibility: hidden;
+}
+
+
+
+
+/* All Quotation css */
+.btn-outline {
+    font-size       : 1.6rem;
+    font-weight     : bold;
+    color           : var(--iconActiveColor);
+    border          : .2rem solid var(--iconActiveColor);
+    padding         : .8rem 2.4rem;
+    border-radius   : .8rem;
+    background-color: transparent;
+}
+
+.table-search {
+    padding-bottom: 3.2rem;
+}
+
+.table-search label {
+    font-weight   : bold;
+    font-size     : 2.4rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    margin-right  : 1.6rem;
+}
+
+.table-search select {
+    font-size       : 1.8rem;
+    font-weight     : normal;
+    color           : var(--fontsInActiveColor);
+    background-color: transparent;
+    border          : .2rem solid var(--iconHoverColor);
+    border-radius   : .8rem;
+    padding         : 2rem 2.4rem;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box input {
+    background-color: transparent !important;
+    padding         : 2rem 2.4rem !important;
+    color           : var(--fontsInActiveColor) !important;
+    font-weight     : normal !important;
+    font-size       : 1.8rem !important;
+    border          : .2rem solid var(--iconHoverColor) !important;
+    border-radius   : .8rem !important;
+}
+
+.dataTables_filter input,
+.dataTables_length select {
+    background-color: transparent !important;
+    padding         : 1.5rem 1.5rem !important;
+    color           : var(--fontsInActiveColor) !important;
+    font-weight     : normal !important;
+    font-size       : 1.8rem !important;
+    border          : .2rem solid var(--iconHoverColor) !important;
+    border-radius   : .8rem !important;
+    margin-left     : 1.2rem !important;
+    margin-right    : 1.2rem !important;
+}
+
+.dataTables_length select option {
+    background: var(--backgroundColor);
+}
+
+
+
+.dataTables_filter label,
+.dataTables_length label {
+    color    : var(--fontsInActiveColor) !important;
+    font-size: 1.8rem !important;
+}
+
+
+
+/* .dataTables_length select {
+    color    : var(--fontsInActiveColor) !important;
+    font-size: 1.8rem !important;
+    border   : .2rem solid var(--iconHoverColor) !important;
+} */
+
+
+
+.input-box span {
+    position: absolute;
+    right   : 1.8rem;
+    top     : 35%;
+    cursor  : pointer;
+}
+
+
+.acceptStatus {
+    display       : inline-block;
+    color         : var(--successColor);
+    font-weight   : 500;
+    font-size     : 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding       : .7rem;
+    background    : rgba(111, 207, 151, 0.1);
+    border-radius : .4rem;
+    min-width     : 11.4rem;
+}
+
+
+.acceptStatus svg {
+    margin-top: -.4rem;
+}
+
+.pendingStatus {
+    display       : inline-block;
+    color         : var(--infoColor);
+    font-weight   : 500;
+    font-size     : 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding       : .7rem;
+    background    : rgba(242, 201, 76, 0.1);
+    border-radius : .4rem;
+    min-width     : 11.4rem;
+
+}
+
+
+.pendingStatus svg {
+    margin-top: -.3rem;
+}
+
+
+.rejectStatus {
+    display       : inline-block;
+    color         : var(--rejectColor);
+    font-weight   : 500;
+    font-size     : 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding       : .7rem;
+    background    : rgba(235, 87, 87, 0.1);
+    border-radius : .4rem;
+    min-width     : 11.4rem;
+
+}
+
+.rejectStatus svg {
+    margin-top: -.3rem;
+}
+
+
+.actionBtn {
+    max-width: 12rem;
+}
+
+.actionBtn button {
+    background-color: var(--iconHoverColor);
+    border-radius   : .6rem;
+    border          : none;
+    padding         : 1.4rem 1.6rem;
+    margin-right    : 1.2rem;
+}
+
+.actionBtn button:first-child:hover {
+    background-color: var(--fontsActiveColor);
+}
+
+.actionBtn button:first-child:hover svg path {
+    fill: var(--componentBgColor);
+}
+
+.actionBtn button:nth-child(2):hover {
+    background-color: var(--iconActiveColor);
+}
+
+.actionBtn button:nth-child(2):hover svg path {
+    fill: var(--componentBgColor);
+}
+
+.actionBtn button:last-child {
+    background  : rgba(235, 87, 87, 0.1);
+    margin-right: 0;
+}
+
+.actionBtn button:last-child:hover {
+    background-color: var(--rejectColor);
+}
+
+.actionBtn button:last-child:hover svg path {
+    fill: var(--componentBgColor);
+}
+
+.form-check-input:checked {
+    background-color: var(--iconActiveColor);
+}
+
+.form-switch .form-check-input:checked {
+    background-image: url("../images/Frame\ 309.svg");
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url('../images/Frame\ 308.svg');
+
+}
+
+.form-switch .form-check-input {
+    border          : none !important;
+    background-image: url('../images/Frame\ 308.svg');
+    background-color: var(--iconHoverColor) !important;
+    box-shadow      : none;
+    height          : 2.8rem;
+    width           : 5rem;
+}
+
+
+/* Modal CSS */
+.custom-modal .modal-content {
+    background-color: var(--componentBgColor);
+    border-radius   : 1.2rem;
+    padding         : 3.2rem;
+}
+
+.custom-modal .modal-title {
+    font-weight   : bold;
+    font-size     : 2.2rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    padding-top   : 0;
+}
+
+.custom-modal .btn-close {
+    font-weight   : bold;
+    font-size     : 2.2rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+}
+
+.custom-modal .modal-header {
+    padding      : 0;
+    border-bottom: none;
+}
+
+.custom-modal .modal-body {
+    padding: 4rem 0;
+}
+
+.custom-modal.no-header .modal-body {
+    padding-top: 0;
+}
+
+.custom-modal.no-footer .modal-body {
+    padding-bottom: 0;
+}
+
+.custom-modal .modal-body .form-input:last-child {
+    padding-bottom: 0;
+}
+
+.custom-modal .modal-footer {
+    border-top: none;
+    padding   : 0;
+}
+
+.custom-modal .modal-footer button:first-child {
+    font-weight     : bold;
+    font-size       : 1.6rem;
+    color           : var(--fontsActiveColor);
+    padding         : 1.6rem 2.4rem;
+    background-color: transparent;
+    border-radius   : 10px;
+    border          : none;
+}
+
+.custom-modal .modal-footer button:last-child {
+    background-color: var(--iconActiveColor);
+    border-radius   : 1rem;
+    font-weight     : bold;
+    font-size       : 1.6rem;
+    color           : var(--backgroundColor);
+    padding         : 1.6rem 4rem;
+    border          : none;
+}
+
+.btn-close {
+    width        : inherit;
+    height       : inherit;
+    border       : 0;
+    border-radius: .25rem;
+    opacity      : 1;
+    background   : transparent;
+}
+
+.form-check-input {
+    background-color: transparent !important;
+    padding         : initial !important;
+    border          : .2rem solid var(--fontsInActiveColor) !important;
+
+}
+
+.form-check-input:checked {
+    background-color: var(--iconActiveColor) !important;
+    padding         : initial !important;
+    border          : none !important;
+}
+
+.dropify-wrapper {
+    background-color: transparent;
+    border          : .2rem dotted var(--fontsInActiveColor);
+    border-radius   : 1.2rem;
+    font-size       : 1.2rem !important;
+    height          : 20rem;
+    padding         : 1.8rem 2.2rem;
+}
+
+.dropify-wrapper:hover {
+    background-size : 0 0;
+    background-image: none;
+}
+
+.dropify-wrapper .dropify-message p {
+    font-size  : 2.4rem;
+    line-height: 2.8rem;
+    color      : var(--fontsInActiveColor);
+    margin     : 1.2rem 0 0;
+}
+
+
+
+
+/* Delete Modal Design */
+.deleteBtn {
+    background-color: var(--rejectColor) !important;
+}
+
+.deleteModalBody {
+    max-width: 24.6rem;
+    width    : 100%;
+}
+
+.deleteModalBody svg {
+    height: 3.3rem;
+    width : 3.3rem;
+}
+
+.deleteModalBody svg path {
+    fill: var(--inconInActiveColor);
+}
+
+.deleteModalBody h3 {
+    font-weight   : bold;
+    font-size     : 2.4rem;
+    line-height   : 2.8rem;
+    color         : var(--fontsActiveColor);
+    letter-spacing: -0.02em;
+    padding-top   : 1.1rem;
+}
+
+.deleteModalBody p {
+    font-size     : 1.6rem;
+    line-height   : 2.4rem;
+    color         : var(--inconInActiveColor);
+    letter-spacing: -0.02em;
+    padding-top   : .8rem;
+    padding-bottom: 5rem;
+}
+
+
+/* View Modal */
+.view-modal img {
+    height       : 20rem;
+    width        : 20rem;
+    border-radius: 1.2rem;
+}
+
+.view-modal h6 {
+    font-weight: bold;
+    font-size  : 1.6rem;
+    line-height: 1.9rem;
+    color      : var(--fontsActiveColor);
+    margin-top : 5.3rem;
+}
+
+.view-modal h5 {
+    font-weight: normal;
+    font-size  : 1.8rem;
+    line-height: 2.2rem;
+    color      : var(--fontsInActiveColor);
+    padding-top: .8rem;
+}
+
+.message-icon .bgPath {
+    fill: var(--componentBgColor);
+}
+
+.message-icon .frontPath {
+    fill: var(--fontsInActiveColor);
+}
+
+
+
+/* Data Table CSS Overrite */
+table.dataTable {
+    width: 100% !important;
+}
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    border-bottom: none;
+}
+
+.dashboardTable.no-footer tr:last-child td {
+    padding-bottom: 5.6rem;
+}
+
+table.dataTable.no-footer {
+    border: none;
+}
+
+.dataTable {
+    padding-top: 2.8rem;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color    : var(--fontsInActiveColor) !important;
+    font-size: 1.8rem !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color     : var(--fontsInActiveColor) !important;
+    background: transparent !important;
+    border    : 1px solid var(--fontsInActiveColor) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color        : var(--fontsInActiveColor) !important;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color        : white !important;
+    border       : 1px solid var(--iconHoverColor);
+    border-radius: 4px;
+    background   : var(--iconHoverColor) !important;
+}
+
+table.dataTable thead th {
+    padding: 3.1rem 1rem;
+}
+
+table.dataTable tbody td {
+    padding: 1.8rem 1rem;
+}
+
+table.dataTable thead .sorting {
+    background: none !important;
+}
+
+
+
+/* Subscription Card */
+.subscription-card {
+    background-color: var(--componentBgColor);
+    border-radius   : 1.6rem;
+}
+
+
+.subscription-card .card-body {
+    padding: 1.8rem 1.8rem 3.2rem 3.2rem;
+}
+
+
+.subscription-card .card-body h6 {
+    font-weight: normal;
+    font-size  : 1.4rem;
+    line-height: 1.7rem;
+    text-align : right;
+    color      : var(--fontsInActiveColor);
+}
+
+
+.subscription-card .logo-box {
+    width        : 100%;
+    height       : 80px;
+    margin-bottom: 2.4rem;
+}
+
+
+.subscription-card .logo-box img {
+    height   : 100%;
+    max-width: 100%;
+}
+
+.subscription-card .card-body h5 {
+    font-size  : 1.6rem;
+    line-height: 1.9rem;
+    font-weight: normal;
+    color      : var(--fontsInActiveColor);
+}
+
+
+.subscription-card .card-body h2 {
+    font-weight   : bold;
+    font-size     : 2rem;
+    line-height   : 2.2rem;
+    letter-spacing: -0.02em;
+    color         : var(--fontsActiveColor);
+    margin-top    : .8rem;
+    max-width     : 18.5rem;
+    margin-bottom : 3.2rem;
+}
+
+.subscription-card .card-body h1 {
+    font-weight   : bold;
+    font-size     : 2.4rem;
+    line-height   : 2.2rem;
+    letter-spacing: -0.05em;
+    color         : var(--iconActiveColor);
+}
+
+
+.subscription-card .card-footer {
+    border-top-color: var(--iconHoverColor);
+    padding         : 1.6rem;
+}
+
+
+.ligtGrayBtn {
+    background-color: var(--iconHoverColor);
+    border-radius   : .6rem;
+    border          : none;
+    padding         : 1.4rem 1.6rem;
+    margin-right    : 1.2rem;
+}
+
+
+.ligtGrayBtn svg path {
+    fill: var(--fontsInActiveColor);
+}
+
+.ligtGrayBtn:hover {
+    background-color: var(--fontsActiveColor);
+}
+
+.ligtGrayBtn:hover svg path {
+    fill: var(--componentBgColor);
+}
+
+
+/* Subscription Card End CSS */
+
+
+
+select option{
+    background-color: var(--backgroundColor);
+}
+
+select option{
+    background-color: var(--backgroundColor);
+}
+
+
+/* Responsive CSS */
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* project management module sidebar underline */
+.dropdown-divider {
+    border-top: 2px dotted white;
+    height: 2px;
+}
+
+/* project status change button style */
+.row .col-6 .fillBtn{
+    
+    background-color: var(--iconHoverColor);
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--backgroundColor);
+    padding: 1.6rem 4rem;
+    border: none;
+    color: white;
+}
+
+.row .col-6 .fillBtn:hover {
+    background-color: var(--fontsActiveColor);
+    color: black;
+}
